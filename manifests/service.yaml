@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: MisakifBlog
+  name: misakif-blog
   namespace: namespace-workflow-1715402491197
 spec:
   type: LoadBalancer
   selector:
-    app: MisakifBlog
+    app: misakif-blog
   ports:
     - protocol: TCP
       port: 8080
