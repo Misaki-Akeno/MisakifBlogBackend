@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: MisakifBlog
+  labels:
+    app: MisakifBlog
+  namespace: namespace-workflow-1715402491197
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: MisakifBlog
+  template:
+    metadata:
+      labels:
+        app: MisakifBlog
+    spec:
+      containers:
+        - name: MisakifBlog
+          image: acrworkflow1715402491197.azurecr.io/image-workflow-1715402491197:latest
+          ports:
+            - containerPort: 8080
